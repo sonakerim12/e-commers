@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Shop</title>
+    <link rel="stylesheet" href="komputerlerim.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <hr class="btnhr">
+    <button class="btn btn-warning" onclick="location.href='./index.html'">Əsas Səhifə</button>
+    <button class="btn btn-primary" onclick="toggleComputerForm()">Yeni komputer</button>
+    <hr>
+    <div class="search-select">
+        <div>
+            <label for="5-entries">Show</label>
+            <select name="" id="entries">
+                <option value="">5 entries</option>
+            </select>
+        </div>
+    <div>
+        <label for="search-1">Search</label>
+    <input type="search" name="" id="search-1">
+    </div>
+        </div>
+    <table>
+        <thead>
+           
+            <tr>
+                <th>ID</th>
+                <th>Ad</th>
+                <th>Şəkil</th>
+                <th>Qiymət</th>
+                <th>Əməliyyatlar</th>
+            </tr>
+        </thead>
+        <tbody id="computerTableBody"> 
+        </tbody>
+    </table>
+    <p class="show" style="padding: 30px;">Show <span id="rowCount">0</span> of <span id="rowCountVisible">0</span> entries</p>
+
+    <div class="buttons"> 
+      <button id="backButton" > Öncəki</button>  <button id="nextButton" >Sontakı</button>
+    </div>
+    <div id="computerFormOverlay">
+        <div id="computerForm">
+            <button onclick="closeComputerForm()" class="close-button">X</button>
+            <h2>Yeni</h2>
+            <form id="addComputerForm">
+                <div style="display: flex; justify-content: space-between; gap: 10px;">
+                    <div style="flex: 1;">
+                        <label for="category">Kategoriya:</label>
+                        <select id="category" name="category">
+                            <option value="Acer">Acer</option>
+                            <option value="hp">HP</option>
+                            <option value="asus">Asus</option>
+                            <option value="dell">Dell</option>
+                            <option value="lenovo">Lenovo</option>
+                            <option value="lg">LG</option>
+                            <option value="casper">Casper</option>
+                            <option value="fujitsu">Fujitsu</option>
+                            <option value="nexus">Nexus</option>
+                            <option value="samsung">Samsung</option>
+                            <option value="toshiba">Toshiba</option>
+                            <option value="sony">Sony</option>
+                        </select>
+                    
+                        <label for="computerName">Ad:</label>
+                        <input type="text" id="computerName" name="computerName" required>
+                        <p class="true">True</p>
+                        <p class="false">Minimum "2" Symbols</p>
+                        <label for="computerPrice">Qiymət:</label>
+                        <input type="text" id="computerPrice" name="computerPrice" required>
+                        <p class="true">True</p>
+                        <p class="false">Minimum "2" Symbols</p>
+                        <label for="condition">Yeni:</label>
+                        <select id="condition" name="condition" required>
+                            <option value="Bəli">Bəli</option>
+                            <option value="Xeyr">Xeyr</option>
+                        </select>
+                        <label for="computerImage">Şəkil URL:</label>
+                        <input type="text" id="computerImage" name="computerImage" required oninput="previewImage(this)">
+                        <p class="true">True</p>
+                        <p class="false">Minimum "2" Symbols</p>
+                        <img id="imagePreview" src="" style="max-width: 100px; max-height: 100px; margin-top: 5px;">
+                    </div>
+                    <div style="flex: 1;">
+                        <label for="ram">Əməliyyat Yaddaş:</label>
+                        <input type="text" id="ram" name="ram" required>
+                        <p class="true">True</p>
+                        <p class="false">Minimum "2" Symbols</p>
+                        <label for="cpu">Mərkəzi Prosesor:</label>
+                        <input type="text" id="cpu" name="cpu" required>
+                        <p class="true">True</p>
+                        <p class="false">Minimum "2" Symbols</p>
+                        <label for="storage">Daimi Yaddaş:</label>
+                        <input type="text" id="storage" name="storage" required>
+                        <p class="true">True</p>
+                        <p class="false">Minimum "2" Symbols</p>
+                        <label for="storageType">Yaddaş Tipi:</label>
+                        <input type="text" id="storageType" name="storageType" required>
+                        <p class="true">True</p>
+                        <p class="false">Minimum "2" Symbols</p>
+                        <label for="os">Əməliyyat Sistemi:</label>
+                        <input type="text" id="os" name="os" required>
+                        <p class="true">True</p>
+                        <p class="false">Minimum "2" Symbols</p>
+                        <label for="gpu">Video Kart:</label>
+                        <input type="text" id="gpu" name="gpu" required>
+                        <p class="true">True</p>
+                        <p class="false">Minimum "2" Symbols</p>
+                    </div>
+                </div>
+                <hr class="abchr">
+                <div class="abc">
+                    <button type="button" class="btn btn-primary"onclick="saveComputer(),location.reload()">Yadda Saxla</button>
+                    <button type="button" class="btn btn-warning"onclick="resetComputerForm()">Məlumatları sıfırla</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="enlargedImage" class="img-fluid" alt="Enlarged Image">
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="komputerlerim.js"></script>
+    <script>
+        function closeComputerForm() {
+            document.getElementById('computerFormOverlay').style.display = 'none';
+        }
+        function previewImage(input) {
+            const imagePreview = document.getElementById('imagePreview');
+            const imageUrl = input.value;
+            imagePreview.src = imageUrl;
+        }
+    </script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+*{
+    font-family: 'Salsa', cursive;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.true,.false{
+    display: none;
+    margin: 0;
+  }
+  
+  .true{
+    color: green;
+  }
+  
+  .false{
+    color: red;
+  }
+  .blue-button{
+    margin-right:15px ;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#search {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid #e8a20a;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+th {
+    background-color: bisque;
+  
+}
+
+#computerFormOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#computerForm {
+    background: rgb(234, 232, 219);
+    padding: 20px;
+    border-radius: 5px;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+#computerForm h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#computerForm label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+#computerForm input,
+#computerForm select {
+    width: 100%;
+    padding-left: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.close-button {
+    float: right;
+    text-align: center;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    border-radius: 6px;
+    border-color: rgba(255, 0, 0, 0.233);
+    background-color: rgba(255, 0, 0, 0.233);
+    color: white;
+}
+
+.btn-warning {
+    margin-left: 0.7vw;
+}
+
+hr {
+    width: 98.5% !important;
+    margin: 20px auto !important;
+}
+
+input,
+select {
+    width: 78vh !important;
+    height: 4.2vh;
+}
+
+.abc .btn-warning {
+    margin-left: 0;
+}
+
+.abchr {
+    width: 98%
+}
+
+img {
+    width: 50px;
+    height: 40px;
+}
+
+.search {
+    width: 11vw !important;
+    margin-right: 2.5vw;
+    height: 3vh;
+    border-radius: 15px !important;
+
+}
+
+
+.s {
+    margin-left: 84vw;
+    height: 1vh;
+}
+
+.s, .search{
+    display: flex;
+    flex-direction: row;
+  
+   
+    
+}
+#search-1{
+    border-radius: 15px;
+    width: 120px !important;
+    padding: 5px;
+}
+#entries{
+width: 100px !important;
+border-radius: 15px;
+}
+.red-button {
+    display: inline-block;
+	font-weight: 400;
+	color: #212529;
+	text-align: center;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: .25rem;
+	color: #fff;
+	background-color: red;
+    
+}
+.blue-button {
+    display: inline-block;
+	font-weight: 400;
+	color: #212529;
+	text-align: center;
+	border: 1px solid transparent;
+	padding: .375rem .75rem;
+	font-size: 1rem;
+	line-height: 1.5;
+	border-radius: .25rem;
+	color: #fff;
+	background-color: #23e958;
+    margin-left: 7px !important;
+ 
+}
+
+.red-button:hover {
+    background-color: #d08018;
+}
+.blue-button:hover {
+    background-color: #1890d0;
+}
+
+.red-button:focus {
+    background-color: #d08018;
+    box-shadow:#d08018;
+}
+
+
+.blue{
+    color: blue;
+}
+th {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  th::after {
+    content: ' ▼'; 
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  th.asc::after {
+    content: ' ▲'; 
+    color: green !important;
+  }
+  
+  th.desc::after {
+    content: ' ▼'; 
+    color: rgb(226, 9, 9) !important;
+  }
+  
+  #imageModal{
+    position: absolute;
+    top: 20%;
+  }
+  #enlargedImage{
+    width: 100%;
+    height: 100%;
+  }
+  .buttons{
+    display: flex;
+    justify-content: end;
+    margin-right: 30px;
+  }
+  .search-select{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  }
+  #backButton,#nextButton{
+   width: 50px;
+   height: 25px;
+   font-size: 10px;
+   padding: 4px;
+   background: rgb(241, 233, 157);
+  }
