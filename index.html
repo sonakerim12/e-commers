@@ -1,19 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>E-commerce Home</title>
 </head>
 
-
 <body>
     <header>
-        <div class="bg-black text-light text-center py-2">
+        <div class="bg-black text-light text-center">
             <p class="p-2">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a href="/pages/shop/shop.html" class="text-warning">Shop now</a></p>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -32,11 +29,11 @@
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search">
-                        
+
                     </form>
                     <i class="bi bi-person-circle"></i><span id="userLog"></span>
-                    <a href="./hesab.html" class="btn btn-danger ms-3" id="loginButton">Log in</a>
-                    <a href="" class="btn btn-danger ms-3" id="logoutButton">Log out</a>
+                    <a href="./hesab.html" class="btn btn-danger ms-3" id="loginButton" style="display: inline-block;">Log in</a>
+                    <a href="" class="btn btn-danger ms-3" id="logoutButton" style="display: none;">Log out</a>
                 </div>
             </div>
         </nav>
@@ -45,9 +42,9 @@
     <section class="container mt-4">
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active"><img src="./photos/image-884.avif" class="d-block w-100"></div>
-                <div class="carousel-item"><img src="./photos/iOS-17-wallpaper.webp" class="d-block w-100"></div>
-                <div class="carousel-item"><img src="./photos/iphone-16-wallpapers.webp" class="d-block w-100"></div>
+                <div class="carousel-item"><img src="./photos/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-hero-220907_Full-Bleed-Image.jpg.large.jpg" class="d-block w-100"></div>
+                <div class="carousel-item"><img src="./photos/Apple-iPhone-14-iPhone-14-Plus-hero-220907.jpg.og.jpg" class="d-block w-100"></div>
+                <div class="carousel-item active"><img src="./photos/EFtSiWSv7W922b5duHyA8V.jpg" class="d-block w-100"></div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon"></span>
@@ -63,7 +60,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="./photos/image-884.avif" class="card-img-top">
+                    <img src="./photos/Apple-iPhone-14-iPhone-14-Plus-hero-220907.jpg.og.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Product 1</h5>
                         <p class="card-text">$100</p>
@@ -73,7 +70,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="./photos/iOS-17-wallpaper.webp" class="card-img-top">
+                    <img src="./photos/EFtSiWSv7W922b5duHyA8V.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Product 2</h5>
                         <p class="card-text">$120</p>
@@ -83,7 +80,7 @@
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="./photos/iphone-16-wallpapers.webp" class="card-img-top">
+                    <img src="./photos/Apple-iPhone-14-Pro-iPhone-14-Pro-Max-hero-220907_Full-Bleed-Image.jpg.large.jpg" class="card-img-top">
                     <div class="card-body">
                         <h5 class="card-title">Product 3</h5>
                         <p class="card-text">$90</p>
@@ -93,6 +90,48 @@
             </div>
         </div>
     </section>
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Just Released Items</h2>
+        <div class="row items-div">
+            <div class="div-left">
+                <img src="./photos/a6074f13-7c06-488f-aee3-64aab36d231c-0-86ab.jpg" alt="">
+                <p>
+                    The New Airpods 4
+                </p>
+            </div>
+            <div class="div-right">
+                <img src="/photos/946484-55ebc8f45f3ef75923f159f02508daab.jpg.png" alt="">
+                <img src="/photos/airpods-4-select-202409_FMT_WHH.jpeg" alt="">
+                <p>Discover More </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Just Released Items</h2>
+        <div class="row promotion-main">
+            <div class="promotion-image">
+                <img src="./photos/2c9b3581a0a349af00d590d738c52494.jpeg" alt="" width="300px">
+            </div>
+            <div class="promotion-div">
+                <h3>Promotion!</h3>
+                <h2>Hurry Up 40% OFF</h2>
+                <h4>Thousand of high tech are waiting for you</h4>
+                <button>Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
 
     <footer class="bg-black p-5 text-light mt-5">
         <div class="row">
@@ -164,7 +203,7 @@
                     </small>
                 </p>
                 <div>
-                    <img src="/images/footer/qr.png" alt="">
+                    <img src="/photos/qrCode.png" alt="" width="100px">
                 </div>
             </div>
 
@@ -172,13 +211,13 @@
         </div>
         <div class="mt-5">
             <p class="text-secondary text-center">
-                Copyright Rimel 2022. All right reserved
+                Copyright Rimel 2025. All right reserved
             </p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./app.js"></script>
-</body>
 
-</html>
+
+</body></html>
