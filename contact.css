@@ -1,0 +1,30 @@
+.contact-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    gap: 30px;
+}
+
+.contact-box, .contact-form {
+    width: 40%;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.send-btn {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

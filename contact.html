@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="./create.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./contact.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
-
 </head>
-
 <body>
     <header>
         <div class="bg-black text-light text-center py-2">
@@ -43,68 +39,28 @@
         </nav>
     </header>
 
-    <section class="my-5">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <img class="w-100" src="https://miro.medium.com/v2/resize:fit:1400/0*rjRhMbzcBNxr-K02.jpg" alt="">
+    <main>
+        <section class="contact-section">
+            <div class="contact-box">
+                <h3>Bizə Zəng Edin</h3>
+                <p>7/24 xidmətinizdəyik</p>
+                <p>Telefon: +88061112222</p>
+                <h3>Bizə Yazın</h3>
+                <p>Formu doldurun, 24 saat ərzində sizə cavab verəcəyik</p>
+                <p>Email: customer@exclusive.com</p>
+                <p>Email: support@exclusive.com</p>
             </div>
-            <div class="col-12 col-md-6">
-                <h1 class="text-center">
-                    Create an account
-                </h1>
-                <form class="row g-3 needs-validation col-6 m-auto " novalidate>
-                    <div class="col-md-12">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control name" id="name" name="name" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <label for="surname" class="form-label">Surname</label>
-                        <input type="text" class="form-control surname" id="surname" name="surname" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control email" id="email" name="email"  required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <label for="username" class="form-label">Username</label>
-                        <input type="text" class="form-control username" id="username" name="username" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-                    <div class="col-md-12">
-                        <label for="password" class="form-label">Password</label>
-                        <input type="password" class="form-control password" id="password" name="password" required>
-                        <div class="valid-feedback">
-                            Looks good!
-                        </div>
-                    </div>
-
-                    <div class="col-12">
-                        <button class="btn btn-danger w-100 p-3 mt-3" type="submit" id="btn1">Create account</button>
-                    </div>
-
-                    <p class="text-center">
-                        <small>
-                          Already have account?
-                        </small>
-                        <a class="text-danger" href="./hesab.html">Log in</a>
-                      </p>
-                </form>
+            <div class="contact-form">
+                <input type="text" placeholder="Adınız *">
+                <input type="email" placeholder="Emailiniz *">
+                <input type="text" placeholder="Telefonunuz *">
+                <textarea placeholder="Mesajınız"></textarea>
+                <button class="btn btn-danger">Mesaj Göndər</button>
             </div>
+        </section>
+    </main>
 
-        </div>
 
-    </section>
 
     <footer class="bg-black p-5 text-light mt-5">
         <div class="row">
@@ -179,22 +135,16 @@
                     <img src="/images/footer/qr.png" alt="">
                 </div>
             </div>
-
-
+      
+      
         </div>
         <div class="mt-5">
             <p class="text-secondary text-center">
                 Copyright Rimel 2022. All right reserved
             </p>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-   
+      </footer>
 
-    <script  type="module" src="./create.js"></script>
-
+      <script src="./contact.js"></script>
 </body>
-
 </html>
